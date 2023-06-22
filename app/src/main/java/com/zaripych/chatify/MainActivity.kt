@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.zaripych.chatify.chat_list.presentation.ui.ChatListScreen
 import com.zaripych.chatify.ui.theme.ChatifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -17,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ChatifyTheme {
-
+                ChatListScreen()
             }
         }
     }

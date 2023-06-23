@@ -1,11 +1,11 @@
-package com.zaripych.chatify.chat_list.presentation.ui
+package com.zaripych.chatify.private_chat.presentation.ui
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 
 @Composable
-fun ChatListScreen(
+fun PrivateChatScreen(
     navController: NavController
 ) {
-    ChatListView(navController = navController)
+    PrivateChatView(navController = navController)
 }

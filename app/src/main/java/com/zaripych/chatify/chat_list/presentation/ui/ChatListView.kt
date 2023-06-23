@@ -18,13 +18,18 @@ fun ChatListView(
     modifier: Modifier = Modifier,
     navController: NavController
 ) {
-    val list = listOf("Name1", "Name2", "Name3", "Name4")
+    val list = listOf("Фара", "Name2", "Name3", "Name4")
     Scaffold(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
+        topBar = {
+            TopBarChatList()
+        }
     ) { paddingValues ->
-        LazyColumn(modifier = Modifier
-            .fillMaxSize()
-            .padding(paddingValues)) {
+        LazyColumn(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+        ) {
             items(list) {
                 ChatItem(
                     item = it,

@@ -1,5 +1,7 @@
 package com.zaripych.chatify.chat_list.presentation.ui
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,8 +11,10 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.zaripych.chatify.ui.theme.white
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -25,16 +29,23 @@ fun ChatListView(
             TopBarChatList()
         }
     ) { paddingValues ->
-        LazyColumn(
+        Column(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(paddingValues)
+                .background(white)
         ) {
-            items(list) {
-                ChatItem(
-                    item = it,
-                    navController = navController
-                )
+            LazyColumn(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(top = 16.dp)
+            ) {
+                items(list) {
+                    ChatItem(
+                        item = it,
+                        navController = navController
+                    )
+                }
             }
         }
     }

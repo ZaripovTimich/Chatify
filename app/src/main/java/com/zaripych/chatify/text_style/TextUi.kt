@@ -10,6 +10,26 @@ import com.zaripych.chatify.ui.theme.black
 
 
 @Composable
+fun TextRegular13(
+    modifier: Modifier = Modifier,
+    text: String,
+    textAlign: TextAlign? = null,
+    color: Color = black,
+    maxLines: Int = Int.MAX_VALUE
+) {
+    Text(
+        modifier = modifier,
+        text = text,
+        style = textStyleRobotoRegular13(
+            textAlign = textAlign,
+            color = color
+        ),
+        overflow = TextOverflow.Ellipsis,
+        maxLines = maxLines
+    )
+}
+
+@Composable
 fun TextMedium13(
     modifier: Modifier = Modifier,
     text: String,

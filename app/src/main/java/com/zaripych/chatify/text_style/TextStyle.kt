@@ -11,6 +11,20 @@ import com.zaripych.chatify.ui.theme.black
 
 
 @Composable
+fun textStyleRobotoRegular13(
+    textAlign: TextAlign? = null,
+    color: Color = black,
+) = TextStyle(
+    textAlign = textAlign,
+    color = color,
+    fontFamily = robotoFontFamily,
+    fontSize = 13.sp,
+    lineHeight = 16.sp,
+    fontStyle = FontStyle.Normal,
+    fontWeight = FontWeight.W400,
+)
+
+@Composable
 fun textStyleRobotoMedium13(
     textAlign: TextAlign? = null,
     color: Color = black,
